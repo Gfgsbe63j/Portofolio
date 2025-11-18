@@ -9,6 +9,7 @@
     <title>Web Developer | Custom Websites for Local Businesses</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/enhanced-styles.css">
+    <link rel="stylesheet" href="css/kitamaru-inspired.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
     <!-- Schema Markup for SEO -->
@@ -54,14 +55,14 @@
                 <a href="#home"><span class="logo-text">Web</span>Dev<span class="dot">.</span></a>
             </div>
             <ul class="nav-menu" id="nav-menu">
-                <li><a href="#home" class="nav-link">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
-                <li><a href="#pricing" class="nav-link">Pricing</a></li>
-                <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#home" class="nav-link animated-underline">Home</a></li>
+                <li><a href="#about" class="nav-link animated-underline">About</a></li>
+                <li><a href="#skills" class="nav-link animated-underline">Skills</a></li>
+                <li><a href="#services" class="nav-link animated-underline">Services</a></li>
+                <li><a href="#portfolio" class="nav-link animated-underline">Portfolio</a></li>
+                <li><a href="#pricing" class="nav-link animated-underline">Pricing</a></li>
+                <li><a href="#testimonials" class="nav-link animated-underline">Testimonials</a></li>
+                <li><a href="#contact" class="nav-link animated-underline">Contact</a></li>
             </ul>
             <div class="nav-actions">
                 <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
@@ -85,13 +86,18 @@
     </div>
 
     <!-- Hero Section with Animated Gradient -->
-    <section class="hero" id="home">
+    <section class="hero hero-modern" id="home">
+        <div class="hero-gradient-blob"></div>
+        <div class="hero-gradient-blob"></div>
+        <div class="hero-gradient-blob"></div>
+        <div class="morph-shape" style="top: 10%; right: 10%;"></div>
+        <div class="morph-shape" style="bottom: 15%; left: 5%;"></div>
         <div class="hero-animated-bg"></div>
         <div class="hero-overlay"></div>
         <div class="container hero-content" id="main-content">
             <div class="hero-text">
-                <h1 class="hero-title">Transform Your Local Business <span class="highlight">Online</span></h1>
-                <p class="hero-subtitle">Professional web development services that help local businesses grow their online presence and attract more customers.</p>
+                <h1 class="hero-title hero-title-modern reveal">Transform Your Local Business <span class="highlight gradient-text">Online</span></h1>
+                <p class="hero-subtitle reveal">Professional web development services that help local businesses grow their online presence and attract more customers.</p>
 
                 <!-- Hero Stats Counter -->
                 <div class="hero-stats">
@@ -109,9 +115,9 @@
                     </div>
                 </div>
 
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
-                    <a href="#portfolio" class="btn btn-secondary">View My Work</a>
+                <div class="hero-buttons reveal">
+                    <a href="#contact" class="btn btn-primary btn-magnetic magnetic ripple">Get Started</a>
+                    <a href="#portfolio" class="btn btn-secondary btn-magnetic magnetic ripple">View My Work</a>
                 </div>
             </div>
         </div>
@@ -346,8 +352,8 @@
                 <h2 class="section-title">Services</h2>
                 <p class="section-subtitle">Tailored Solutions for Local Businesses</p>
             </div>
-            <div class="services-grid">
-                <div class="service-card">
+            <div class="services-grid bento-grid">
+                <div class="service-card service-card-modern bento-item glass-card reveal">
                     <div class="service-icon">
                         <i class="fas fa-laptop-code"></i>
                     </div>
@@ -359,7 +365,7 @@
                         <li><i class="fas fa-check"></i> Brand Integration</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card service-card-modern bento-item glass-card reveal">
                     <div class="service-icon">
                         <i class="fas fa-store"></i>
                     </div>
@@ -371,7 +377,7 @@
                         <li><i class="fas fa-check"></i> Inventory Management</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card service-card-modern bento-item glass-card reveal">
                     <div class="service-icon">
                         <i class="fas fa-search"></i>
                     </div>
@@ -383,7 +389,7 @@
                         <li><i class="fas fa-check"></i> On-Page Optimization</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card service-card-modern bento-item glass-card reveal">
                     <div class="service-icon">
                         <i class="fas fa-mobile-alt"></i>
                     </div>
@@ -395,7 +401,7 @@
                         <li><i class="fas fa-check"></i> Touch-Friendly Interface</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card service-card-modern bento-item glass-card reveal">
                     <div class="service-icon">
                         <i class="fas fa-wrench"></i>
                     </div>
@@ -407,7 +413,7 @@
                         <li><i class="fas fa-check"></i> Technical Support</li>
                     </ul>
                 </div>
-                <div class="service-card">
+                <div class="service-card service-card-modern bento-item glass-card reveal">
                     <div class="service-icon">
                         <i class="fas fa-rocket"></i>
                     </div>
@@ -431,7 +437,7 @@
                 <p class="section-subtitle">Affordable Solutions for Every Business</p>
             </div>
             <div class="pricing-grid">
-                <div class="pricing-card">
+                <div class="pricing-card tilt-card glass-card reveal">
                     <div class="pricing-header">
                         <h3>Starter</h3>
                         <div class="price">
@@ -449,9 +455,9 @@
                         <li class="disabled"><i class="fas fa-times"></i> E-Commerce</li>
                         <li class="disabled"><i class="fas fa-times"></i> Advanced SEO</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                    <a href="#contact" class="btn btn-outline magnetic ripple">Get Started</a>
                 </div>
-                <div class="pricing-card featured">
+                <div class="pricing-card tilt-card glass-card reveal featured">
                     <div class="popular-badge">Most Popular</div>
                     <div class="pricing-header">
                         <h3>Professional</h3>
@@ -470,9 +476,9 @@
                         <li><i class="fas fa-check"></i> Blog Setup</li>
                         <li><i class="fas fa-check"></i> Analytics Integration</li>
                     </ul>
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                    <a href="#contact" class="btn btn-primary magnetic ripple">Get Started</a>
                 </div>
-                <div class="pricing-card">
+                <div class="pricing-card tilt-card glass-card reveal">
                     <div class="pricing-header">
                         <h3>Enterprise</h3>
                         <div class="price">
@@ -491,7 +497,7 @@
                         <li><i class="fas fa-check"></i> Custom Features</li>
                         <li><i class="fas fa-check"></i> Priority Support</li>
                     </ul>
-                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                    <a href="#contact" class="btn btn-outline magnetic ripple">Get Started</a>
                 </div>
             </div>
         </div>
@@ -1149,5 +1155,6 @@
     <script src="js/script.js"></script>
     <script src="js/enhanced-features.js"></script>
     <script src="js/additional-features.js"></script>
+    <script src="js/kitamaru-features.js"></script>
 </body>
 </html>
