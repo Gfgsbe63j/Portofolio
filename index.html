@@ -4,13 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Professional web development services for local businesses. Custom websites that drive results.">
+    <meta name="keywords" content="web developer, local business websites, custom web design, e-commerce, SEO">
+    <meta name="author" content="WebDev">
     <title>Web Developer | Custom Websites for Local Businesses</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Schema Markup for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "WebDev - Web Development Services",
+      "description": "Professional web development services for local businesses",
+      "url": "https://yourwebsite.com",
+      "telephone": "(555) 123-4567",
+      "email": "hello@webdev.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Your City",
+        "addressRegion": "State"
+      },
+      "priceRange": "$$",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5",
+        "reviewCount": "40"
+      }
+    }
+    </script>
 </head>
 <body>
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
     <!-- Navigation -->
-    <nav class="navbar" id="navbar">
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
         <div class="container">
             <div class="logo">
                 <a href="#home"><span class="logo-text">Web</span>Dev<span class="dot">.</span></a>
@@ -18,12 +55,19 @@
             <ul class="nav-menu" id="nav-menu">
                 <li><a href="#home" class="nav-link">Home</a></li>
                 <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#services" class="nav-link">Services</a></li>
                 <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#pricing" class="nav-link">Pricing</a></li>
                 <li><a href="#testimonials" class="nav-link">Testimonials</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
-            <div class="hamburger" id="hamburger">
+            <div class="nav-actions">
+                <button id="dark-mode-toggle" class="dark-mode-toggle" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
@@ -31,13 +75,39 @@
         </div>
     </nav>
 
-    <!-- Hero Section -->
+    <!-- Sticky CTA Bar -->
+    <div class="sticky-cta-bar" id="sticky-cta-bar">
+        <div class="container">
+            <p>Ready to transform your business online?</p>
+            <a href="#contact" class="btn btn-small">Get Free Quote</a>
+        </div>
+    </div>
+
+    <!-- Hero Section with Animated Gradient -->
     <section class="hero" id="home">
+        <div class="hero-animated-bg"></div>
         <div class="hero-overlay"></div>
-        <div class="container hero-content">
+        <div class="container hero-content" id="main-content">
             <div class="hero-text">
                 <h1 class="hero-title">Transform Your Local Business <span class="highlight">Online</span></h1>
                 <p class="hero-subtitle">Professional web development services that help local businesses grow their online presence and attract more customers.</p>
+
+                <!-- Hero Stats Counter -->
+                <div class="hero-stats">
+                    <div class="hero-stat-item">
+                        <h3 class="counter" data-target="50">0</h3>
+                        <p>Projects Completed</p>
+                    </div>
+                    <div class="hero-stat-item">
+                        <h3 class="counter" data-target="40">0</h3>
+                        <p>Happy Clients</p>
+                    </div>
+                    <div class="hero-stat-item">
+                        <h3 class="counter" data-target="100">0</h3>
+                        <p>% Satisfaction</p>
+                    </div>
+                </div>
+
                 <div class="hero-buttons">
                     <a href="#contact" class="btn btn-primary">Get Started</a>
                     <a href="#portfolio" class="btn btn-secondary">View My Work</a>
@@ -46,6 +116,21 @@
         </div>
         <div class="scroll-indicator">
             <a href="#about"><i class="fas fa-chevron-down"></i></a>
+        </div>
+    </section>
+
+    <!-- Client Logos Section -->
+    <section class="client-logos">
+        <div class="container">
+            <p class="logos-title">Trusted by Local Businesses</p>
+            <div class="logos-slider">
+                <div class="logo-item"><i class="fas fa-utensils"></i><span>Restaurant</span></div>
+                <div class="logo-item"><i class="fas fa-dumbbell"></i><span>Fitness</span></div>
+                <div class="logo-item"><i class="fas fa-cut"></i><span>Salon & Spa</span></div>
+                <div class="logo-item"><i class="fas fa-hammer"></i><span>Construction</span></div>
+                <div class="logo-item"><i class="fas fa-shopping-bag"></i><span>Retail</span></div>
+                <div class="logo-item"><i class="fas fa-tooth"></i><span>Healthcare</span></div>
+            </div>
         </div>
     </section>
 
@@ -66,6 +151,23 @@
                     <h3>Building Websites That Work For Your Business</h3>
                     <p>Hi! I'm a professional web developer specializing in creating custom websites for local businesses. I understand the unique challenges that local business owners face, and I'm here to help you establish a strong online presence that drives real results.</p>
                     <p>With years of experience in web development, I've helped dozens of local businesses increase their visibility, attract more customers, and grow their revenue through effective web solutions.</p>
+
+                    <!-- Certifications/Badges -->
+                    <div class="certifications">
+                        <div class="cert-badge">
+                            <i class="fas fa-certificate"></i>
+                            <span>Certified Developer</span>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-award"></i>
+                            <span>Top Rated</span>
+                        </div>
+                        <div class="cert-badge">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>Secure Coding</span>
+                        </div>
+                    </div>
+
                     <div class="about-stats">
                         <div class="stat">
                             <h4>50+</h4>
@@ -79,6 +181,157 @@
                             <h4>5+</h4>
                             <p>Years Experience</p>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Introduction Section -->
+    <section class="video-intro">
+        <div class="container">
+            <div class="video-content">
+                <div class="video-text">
+                    <h2>See How I Can Help Your Business</h2>
+                    <p>Watch this quick video to learn about my approach to building websites that drive real results for local businesses.</p>
+                    <a href="#contact" class="btn btn-primary">Let's Talk</a>
+                </div>
+                <div class="video-placeholder">
+                    <div class="video-icon">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                    <p>Video Introduction</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills/Technologies Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Tools I Use to Build Amazing Websites</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>HTML5 & CSS3</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="95"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>JavaScript & React</span>
+                        <span class="skill-percentage">90%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="90"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>WordPress Development</span>
+                        <span class="skill-percentage">85%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="85"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>E-Commerce (Shopify, WooCommerce)</span>
+                        <span class="skill-percentage">88%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="88"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>SEO & Analytics</span>
+                        <span class="skill-percentage">80%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="80"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <div class="skill-info">
+                        <span>Responsive Design</span>
+                        <span class="skill-percentage">95%</span>
+                    </div>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-progress="95"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner 1 -->
+    <div class="cta-banner">
+        <div class="container">
+            <h3>Ready to Take Your Business to the Next Level?</h3>
+            <p>Let's create a website that converts visitors into customers</p>
+            <a href="#contact" class="btn btn-primary">Start Your Project</a>
+        </div>
+    </div>
+
+    <!-- Process/Workflow Timeline -->
+    <section class="process-timeline">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">My Process</h2>
+                <p class="section-subtitle">How I Transform Your Ideas Into Reality</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>1. Discovery & Planning</h3>
+                        <p>We discuss your goals, target audience, and project requirements to create a solid foundation.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>2. Design & Prototype</h3>
+                        <p>I create beautiful mockups and prototypes for your approval before development begins.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>3. Development</h3>
+                        <p>Your website is built with clean code, optimized for performance and search engines.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-vial"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>4. Testing & Review</h3>
+                        <p>Thorough testing across all devices and browsers to ensure everything works perfectly.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <div class="timeline-content">
+                        <h3>5. Launch & Support</h3>
+                        <p>Your website goes live, and I provide ongoing support to ensure continued success.</p>
                     </div>
                 </div>
             </div>
@@ -169,15 +422,142 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Pricing/Packages Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Pricing Packages</h2>
+                <p class="section-subtitle">Affordable Solutions for Every Business</p>
+            </div>
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Starter</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">1,499</span>
+                        </div>
+                        <p>Perfect for small businesses</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 5-Page Website</li>
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Basic SEO Setup</li>
+                        <li><i class="fas fa-check"></i> Contact Form</li>
+                        <li><i class="fas fa-check"></i> 1 Month Support</li>
+                        <li class="disabled"><i class="fas fa-times"></i> E-Commerce</li>
+                        <li class="disabled"><i class="fas fa-times"></i> Advanced SEO</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="pricing-header">
+                        <h3>Professional</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">2,999</span>
+                        </div>
+                        <p>Best for growing businesses</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> 10-Page Website</li>
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Advanced SEO</li>
+                        <li><i class="fas fa-check"></i> Contact Forms</li>
+                        <li><i class="fas fa-check"></i> 3 Months Support</li>
+                        <li><i class="fas fa-check"></i> Blog Setup</li>
+                        <li><i class="fas fa-check"></i> Analytics Integration</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary">Get Started</a>
+                </div>
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3>Enterprise</h3>
+                        <div class="price">
+                            <span class="currency">$</span>
+                            <span class="amount">4,999</span>
+                            <span class="plus">+</span>
+                        </div>
+                        <p>For established businesses</p>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Unlimited Pages</li>
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> Premium SEO</li>
+                        <li><i class="fas fa-check"></i> E-Commerce Integration</li>
+                        <li><i class="fas fa-check"></i> 6 Months Support</li>
+                        <li><i class="fas fa-check"></i> Custom Features</li>
+                        <li><i class="fas fa-check"></i> Priority Support</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-outline">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements/Awards Section -->
+    <section class="achievements">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Achievements & Recognition</h2>
+                <p class="section-subtitle">Industry Recognition and Milestones</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <i class="fas fa-trophy"></i>
+                    <h3>Best Web Developer 2023</h3>
+                    <p>Local Business Awards</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-medal"></i>
+                    <h3>Top Rated Professional</h3>
+                    <p>5-Star Rating on Multiple Platforms</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-star"></i>
+                    <h3>50+ Projects Delivered</h3>
+                    <p>On Time and On Budget</p>
+                </div>
+                <div class="achievement-card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>100% Client Satisfaction</h3>
+                    <p>Committed to Excellence</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner 2 -->
+    <div class="cta-banner cta-banner-alt">
+        <div class="container">
+            <h3>Looking for a Custom Solution?</h3>
+            <p>Every business is unique. Let's discuss your specific needs.</p>
+            <a href="#contact" class="btn btn-secondary">Request Custom Quote</a>
+        </div>
+    </div>
+
+    <!-- Portfolio Section with Filter -->
     <section class="portfolio" id="portfolio">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">Portfolio</h2>
                 <p class="section-subtitle">Recent Projects I'm Proud Of</p>
             </div>
+
+            <!-- Portfolio Filter -->
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="restaurant">Restaurant</button>
+                <button class="filter-btn" data-filter="fitness">Fitness</button>
+                <button class="filter-btn" data-filter="beauty">Beauty</button>
+                <button class="filter-btn" data-filter="construction">Construction</button>
+                <button class="filter-btn" data-filter="retail">Retail</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+            </div>
+
             <div class="portfolio-grid">
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="restaurant">
                     <div class="portfolio-image">
                         <div class="image-placeholder">
                             <i class="fas fa-utensils"></i>
@@ -189,10 +569,11 @@
                                 <span>Restaurant</span>
                                 <span>E-Commerce</span>
                             </div>
+                            <button class="btn btn-small view-details" data-project="restaurant">View Details</button>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="fitness">
                     <div class="portfolio-image">
                         <div class="image-placeholder">
                             <i class="fas fa-dumbbell"></i>
@@ -204,10 +585,11 @@
                                 <span>Fitness</span>
                                 <span>Booking</span>
                             </div>
+                            <button class="btn btn-small view-details" data-project="fitness">View Details</button>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="beauty">
                     <div class="portfolio-image">
                         <div class="image-placeholder">
                             <i class="fas fa-cut"></i>
@@ -219,10 +601,11 @@
                                 <span>Beauty</span>
                                 <span>Scheduling</span>
                             </div>
+                            <button class="btn btn-small view-details" data-project="salon">View Details</button>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="construction">
                     <div class="portfolio-image">
                         <div class="image-placeholder">
                             <i class="fas fa-hammer"></i>
@@ -234,10 +617,11 @@
                                 <span>Construction</span>
                                 <span>Gallery</span>
                             </div>
+                            <button class="btn btn-small view-details" data-project="contractor">View Details</button>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="retail">
                     <div class="portfolio-image">
                         <div class="image-placeholder">
                             <i class="fas fa-shopping-bag"></i>
@@ -249,10 +633,11 @@
                                 <span>Retail</span>
                                 <span>E-Commerce</span>
                             </div>
+                            <button class="btn btn-small view-details" data-project="boutique">View Details</button>
                         </div>
                     </div>
                 </div>
-                <div class="portfolio-item">
+                <div class="portfolio-item" data-category="healthcare">
                     <div class="portfolio-image">
                         <div class="image-placeholder">
                             <i class="fas fa-tooth"></i>
@@ -264,6 +649,7 @@
                                 <span>Healthcare</span>
                                 <span>Portal</span>
                             </div>
+                            <button class="btn btn-small view-details" data-project="dental">View Details</button>
                         </div>
                     </div>
                 </div>
@@ -271,76 +657,328 @@
         </div>
     </section>
 
-    <!-- Testimonials Section -->
+    <!-- Portfolio Modal -->
+    <div class="modal" id="portfolio-modal">
+        <div class="modal-content">
+            <button class="modal-close" id="modal-close">&times;</button>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <i class="fas fa-image"></i>
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title">Project Title</h2>
+                    <p id="modal-description">Project description goes here...</p>
+                    <div class="modal-details">
+                        <div class="detail-item">
+                            <strong>Client:</strong>
+                            <span id="modal-client">Client Name</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Industry:</strong>
+                            <span id="modal-industry">Industry</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Technologies:</strong>
+                            <span id="modal-tech">HTML, CSS, JS</span>
+                        </div>
+                        <div class="detail-item">
+                            <strong>Timeline:</strong>
+                            <span id="modal-timeline">4 weeks</span>
+                        </div>
+                    </div>
+                    <h3>Results</h3>
+                    <ul id="modal-results">
+                        <li>40% increase in online orders</li>
+                        <li>50% improvement in page load speed</li>
+                        <li>Mobile-friendly design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Case Studies Preview -->
+    <section class="case-studies">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Case Studies</h2>
+                <p class="section-subtitle">Real Results for Real Businesses</p>
+            </div>
+            <div class="case-studies-grid">
+                <div class="case-study-card">
+                    <div class="case-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Restaurant Revenue Up 40%</h3>
+                    <p>How a new website with online ordering transformed a local restaurant's business model.</p>
+                    <a href="#contact" class="case-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="case-study-card">
+                    <div class="case-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Fitness Center Doubled Memberships</h3>
+                    <p>Strategic website redesign and SEO led to 100% increase in member sign-ups.</p>
+                    <a href="#contact" class="case-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="case-study-card">
+                    <div class="case-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
+                    <h3>E-Commerce Sales Tripled</h3>
+                    <p>Custom e-commerce solution helped local boutique expand their market reach.</p>
+                    <a href="#contact" class="case-link">Read Case Study <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section with Carousel -->
     <section class="testimonials" id="testimonials">
         <div class="container">
             <div class="section-header">
                 <h2 class="section-title">What Clients Say</h2>
                 <p class="section-subtitle">Don't Just Take My Word For It</p>
             </div>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"The website has transformed our business! We've seen a 40% increase in online orders since the new site launched. Highly recommended!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-icon">
-                            <i class="fas fa-user"></i>
+            <div class="testimonials-carousel">
+                <div class="carousel-container">
+                    <div class="testimonial-card active">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
                         </div>
-                        <div class="author-info">
-                            <h4>Sarah Johnson</h4>
-                            <p>Owner, The Local Bistro</p>
+                        <p class="testimonial-text">"The website has transformed our business! We've seen a 40% increase in online orders since the new site launched. Highly recommended!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Owner, The Local Bistro</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Professional, responsive, and delivered exactly what we needed. Our new website has helped us attract so many new customers!"</p>
+                        <div class="testimonial-author">
+                            <div class="author-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Mike Thompson</h4>
+                                <p>Owner, Thompson Construction</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">"Outstanding work! The booking system has made scheduling so much easier for our clients. Our business has never been better."</p>
+                        <div class="testimonial-author">
+                            <div class="author-icon">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="author-info">
+                                <h4>Jennifer Martinez</h4>
+                                <p>Owner, Serenity Spa</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="testimonial-text">"Professional, responsive, and delivered exactly what we needed. Our new website has helped us attract so many new customers!"</p>
-                    <div class="testimonial-author">
-                        <div class="author-icon">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Mike Thompson</h4>
-                            <p>Owner, Thompson Construction</p>
-                        </div>
+                <div class="carousel-controls">
+                    <button class="carousel-btn prev" id="carousel-prev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="carousel-dots" id="carousel-dots"></div>
+                    <button class="carousel-btn next" id="carousel-next">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Frequently Asked Questions</h2>
+                <p class="section-subtitle">Got Questions? I've Got Answers</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>How long does it take to build a website?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Typically, a standard website takes 2-4 weeks from start to finish. More complex projects with e-commerce or custom features may take 6-8 weeks. I'll provide a detailed timeline during our initial consultation.</p>
                     </div>
                 </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-rating">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you offer website maintenance after launch?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! All packages include initial support, and I offer ongoing maintenance plans to keep your website updated, secure, and running smoothly. This includes regular backups, security updates, and content updates.</p>
                     </div>
-                    <p class="testimonial-text">"Outstanding work! The booking system has made scheduling so much easier for our clients. Our business has never been better."</p>
-                    <div class="testimonial-author">
-                        <div class="author-icon">
-                            <i class="fas fa-user"></i>
-                        </div>
-                        <div class="author-info">
-                            <h4>Jennifer Martinez</h4>
-                            <p>Owner, Serenity Spa</p>
-                        </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Will my website be mobile-friendly?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Absolutely! All websites I build are fully responsive and optimized for mobile devices, tablets, and desktops. With over 60% of web traffic coming from mobile, this is essential for success.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Can I update the website content myself?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Yes! I build websites with user-friendly content management systems (CMS) that allow you to easily update text, images, and other content without technical knowledge. I also provide training.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>What about SEO and getting found on Google?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>All my websites include basic SEO optimization. For businesses serious about ranking on Google, I offer advanced SEO packages including keyword research, local SEO, and ongoing optimization.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        <span>Do you provide hosting?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>I can help you choose and set up the best hosting solution for your needs. I work with reliable hosting providers and can manage the technical setup for you.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Blog/Insights Preview -->
+    <section class="blog-preview">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Insights</h2>
+                <p class="section-subtitle">Tips and Strategies for Local Business Success</p>
+            </div>
+            <div class="blog-grid">
+                <article class="blog-card">
+                    <div class="blog-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">November 15, 2024</span>
+                        <h3>5 Must-Have Features for Local Business Websites</h3>
+                        <p>Discover the essential features that make local business websites successful and help convert visitors into customers.</p>
+                        <a href="#contact" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">November 10, 2024</span>
+                        <h3>Why Mobile-First Design Matters in 2024</h3>
+                        <p>Learn why optimizing for mobile devices is crucial for your business success in today's digital landscape.</p>
+                        <a href="#contact" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+                <article class="blog-card">
+                    <div class="blog-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <div class="blog-content">
+                        <span class="blog-date">November 5, 2024</span>
+                        <h3>How to Measure Your Website's Success</h3>
+                        <p>Track the right metrics to understand your website's performance and make data-driven decisions.</p>
+                        <a href="#contact" class="blog-link">Read More <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources/Downloads Section -->
+    <section class="resources">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Free Resources</h2>
+                <p class="section-subtitle">Download Helpful Guides and Templates</p>
+            </div>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-file-pdf"></i>
+                    </div>
+                    <h3>Website Planning Checklist</h3>
+                    <p>A comprehensive checklist to plan your website project from start to finish.</p>
+                    <a href="#contact" class="btn btn-outline btn-small">Download PDF</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <h3>SEO Guide for Local Businesses</h3>
+                    <p>Learn the basics of SEO and how to improve your local search rankings.</p>
+                    <a href="#contact" class="btn btn-outline btn-small">Download Guide</a>
+                </div>
+                <div class="resource-card">
+                    <div class="resource-icon">
+                        <i class="fas fa-clipboard-list"></i>
+                    </div>
+                    <h3>Website Maintenance Checklist</h3>
+                    <p>Keep your website running smoothly with this monthly maintenance guide.</p>
+                    <a href="#contact" class="btn btn-outline btn-small">Download Checklist</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <div class="newsletter-text">
+                    <i class="fas fa-envelope-open-text"></i>
+                    <h2>Stay Updated with Web Development Tips</h2>
+                    <p>Subscribe to receive monthly insights, tips, and exclusive offers for local business owners.</p>
+                </div>
+                <form class="newsletter-form" id="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+                <p class="newsletter-privacy">We respect your privacy. Unsubscribe anytime.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Map -->
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-header">
@@ -371,6 +1009,13 @@
                             <div>
                                 <h4>Location</h4>
                                 <p>Your City, State</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Mon-Fri: 9am - 6pm</p>
                             </div>
                         </div>
                     </div>
@@ -409,6 +1054,15 @@
                     <div class="form-message" id="form-message"></div>
                 </form>
             </div>
+
+            <!-- Location Map -->
+            <div class="location-map">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <p>Location Map</p>
+                    <small>Serving local businesses in Your City and surrounding areas</small>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -427,6 +1081,7 @@
                         <li><a href="#about">About</a></li>
                         <li><a href="#services">Services</a></li>
                         <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#pricing">Pricing</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
@@ -454,9 +1109,41 @@
     </footer>
 
     <!-- Back to Top Button -->
-    <button class="back-to-top" id="back-to-top">
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </button>
+
+    <!-- Floating Contact Button -->
+    <button class="floating-contact-btn" id="floating-contact" aria-label="Quick contact">
+        <i class="fas fa-comments"></i>
+    </button>
+
+    <!-- Live Chat Widget Placeholder -->
+    <div class="chat-widget" id="chat-widget">
+        <div class="chat-header">
+            <h4><i class="fas fa-headset"></i> Need Help?</h4>
+            <button class="chat-close" id="chat-close">&times;</button>
+        </div>
+        <div class="chat-body">
+            <p>Hi there! How can I help you today?</p>
+            <div class="chat-options">
+                <button class="chat-option">Request a quote</button>
+                <button class="chat-option">Ask a question</button>
+                <button class="chat-option">View services</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cookie Consent Banner -->
+    <div class="cookie-banner" id="cookie-banner">
+        <div class="cookie-content">
+            <p><i class="fas fa-cookie-bite"></i> We use cookies to enhance your browsing experience and analyze our traffic. By continuing to use this site, you consent to our use of cookies.</p>
+            <div class="cookie-buttons">
+                <button class="btn btn-small btn-primary" id="accept-cookies">Accept</button>
+                <button class="btn btn-small btn-outline" id="decline-cookies">Decline</button>
+            </div>
+        </div>
+    </div>
 
     <script src="js/script.js"></script>
 </body>
